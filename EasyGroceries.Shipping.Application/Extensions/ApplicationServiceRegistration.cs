@@ -17,7 +17,7 @@ namespace EasyGroceries.Shipping.Application.Extensions
         public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
         {
             services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
-            services.AddSingleton<IShippingSlipProcessorService, ShippingSlipProcessorService>();
+            services.AddScoped<IShippingSlipProcessorService, ShippingSlipProcessorService>();
             return services;
         }
     }
