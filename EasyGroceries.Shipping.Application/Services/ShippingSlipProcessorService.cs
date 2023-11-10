@@ -5,10 +5,12 @@ namespace EasyGroceries.Shipping.Application.Services
 {
     public class ShippingSlipProcessorService : IShippingSlipProcessorService
     {
-
         public async Task GenerateShippingSlip(ShippingInfoDto shippingInfoDto)
         {
-            // Generate shiiping slip here
+            string shippingSlipContent = $"UserId {shippingInfoDto.UserId} has pushases total {shippingInfoDto.OrderDetails.Count()} products of cost {shippingInfoDto.OrderTotal}";
+            string fileName = $"Slip_{shippingInfoDto.UserId}.txt";
+            string filePath = string.Concat(@"D:\Bhushan\ShippingSlip\", fileName);
+            await File.WriteAllTextAsync(filePath, shippingSlipContent);
         }
     }
 }
