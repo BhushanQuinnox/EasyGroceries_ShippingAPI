@@ -5,10 +5,10 @@ namespace EasyGroceries.Shipping.Application.Services
 {
     public class ShippingSlipProcessorService : IShippingSlipProcessorService
     {
-        public Task GenerateShippingSlip(OrderHeaderDto headerDto)
+
+        public async Task GenerateShippingSlip(ShippingInfoDto shippingInfoDto)
         {
-            // TBD: Generate shipping slip by extracting data from headerdto
-            return null;
+            // Generate shiiping slip here
         }
     }
 }
