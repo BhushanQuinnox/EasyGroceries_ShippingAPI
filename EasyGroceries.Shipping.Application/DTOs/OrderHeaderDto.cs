@@ -13,11 +13,7 @@ namespace EasyGroceries.Shipping.Application.DTOs
         public bool LoyaltyMembershipOpted { get; set; }
         public double OrderTotal { get; set; }
         public OrderStatusEnum OrderStatus { get; set; }
-        public string Name { get; set; }
-        public string ApartmentName { get; set; }
-        public string StreetName { get; set; }
-        public string City { get; set; }
-        public string Pincode { get; set; }
+        public CustomerDto CustomerInfo { get; set; }
         public IEnumerable<OrderDetailsDto> OrderDetails { get; set; }
     }
 }
